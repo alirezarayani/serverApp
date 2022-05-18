@@ -50,7 +50,19 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
             config.setAllowedHeaders(Collections.singletonList("*"));
             config.setMaxAge(3600L);
             return config;
-        }).and().csrf().disable().headers().frameOptions().disable().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager(), jwtConfig, secretKey)).addFilterAfter(new JwtTokenVerifier(secretKey, jwtConfig), JwtUsernameAndPasswordAuthenticationFilter.class).authorizeRequests().antMatchers("/", "index", "/css/*", "/js/*", "/h2/**").permitAll().antMatchers("/api/**").hasRole(ApplicationUserRole.STUDENT.name()).anyRequest().authenticated();
+        })
+                .and()
+                .csrf().disable().headers()
+                .frameOptions()
+                .disable()
+                .and().sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and().addFilter(new JwtUsernameAndPasswordAuthenticationFilter(authenticationManager(), jwtConfig, secretKey))
+                .addFilterAfter(new JwtTokenVerifier(secretKey, jwtConfig), JwtUsernameAndPasswordAuthenticationFilter.class)
+                .authorizeRequests()
+                .antMatchers("/", "index", "/css/*", "/js/*", "/h2/**").permitAll()
+                .antMatchers("/api/v1/public/**").permitAll()
+                .anyRequest().authenticated();
     }
 
     @Override
