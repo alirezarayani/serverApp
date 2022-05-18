@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.security;
+package ir.lazydeveloper.serverapp.config.security;
 
 import com.google.common.collect.Sets;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -6,7 +6,7 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import static ir.lazydeveloper.serverapp.security.ApplicationUserPermission.*;
+import static ir.lazydeveloper.serverapp.config.security.ApplicationUserPermission.*;
 
 public enum ApplicationUserRole {
     STUDENT(Sets.newHashSet()),

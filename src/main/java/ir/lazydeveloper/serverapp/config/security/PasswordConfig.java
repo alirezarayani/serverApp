@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.security;
+package ir.lazydeveloper.serverapp.config.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

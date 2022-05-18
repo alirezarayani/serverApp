@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.jwt;
+package ir.lazydeveloper.serverapp.config.security.jwt;
 
 public class UsernameAndPasswordAuthenticationRequest {
 

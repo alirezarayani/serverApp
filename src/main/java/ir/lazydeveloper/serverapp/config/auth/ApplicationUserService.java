@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.auth;
+package ir.lazydeveloper.serverapp.config.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,17 +10,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class ApplicationUserService implements UserDetailsService {
 
-    private final ApplicationUserDao applicationUserDao;
+    private final AccessorService accessorService;
 
     @Autowired
-    public ApplicationUserService(@Qualifier("fake") ApplicationUserDao applicationUserDao) {
-        this.applicationUserDao = applicationUserDao;
+    public ApplicationUserService(AccessorService accessorService) {
+        this.accessorService = accessorService;
     }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return applicationUserDao
-                .selectApplicationUserByUsername(username)
+         return accessorService.getUserByUsername(username)
                 .orElseThrow(() ->
                         new UsernameNotFoundException(String.format("Username %s not found", username))
                 );

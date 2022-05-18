@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.security;
+package ir.lazydeveloper.serverapp.config.security;
 
 public enum ApplicationUserPermission {
     STUDENT_READ("student:read"),

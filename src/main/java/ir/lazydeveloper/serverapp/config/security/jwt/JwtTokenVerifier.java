@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.jwt;
+package ir.lazydeveloper.serverapp.config.security.jwt;
 
 import com.google.common.base.Strings;
 import io.jsonwebtoken.Claims;

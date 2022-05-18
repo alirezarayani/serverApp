@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.jwt;
+package ir.lazydeveloper.serverapp.config.security.jwt;
 
 import com.google.common.net.HttpHeaders;
 import org.springframework.boot.context.properties.ConfigurationProperties;

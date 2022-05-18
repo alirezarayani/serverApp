@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.jwt;
+package ir.lazydeveloper.serverapp.config.security.jwt;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Jwts;

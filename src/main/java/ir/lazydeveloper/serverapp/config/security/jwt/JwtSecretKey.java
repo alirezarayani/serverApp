@@ -1,4 +1,4 @@
-package ir.lazydeveloper.serverapp.jwt;
+package ir.lazydeveloper.serverapp.config.security.jwt;
 
 import io.jsonwebtoken.security.Keys;
 import org.springframework.beans.factory.annotation.Autowired;
