@@ -1,6 +1,6 @@
 package ir.lazydeveloper.serverapp.controller;
 
-import ir.lazydeveloper.serverapp.config.auth.ApplicationUser;
+import  ir.lazydeveloper.serverapp.config.auth.ApplicationUser;
 import ir.lazydeveloper.serverapp.config.auth.ApplicationUserService;
 import ir.lazydeveloper.serverapp.model.Accessor;
 import org.springframework.http.HttpStatus;
@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/public/log-in")
-public class AccessorController {   private final ApplicationUserService applicationUserService;
+public class RegisterController {
 
-    public AccessorController(ApplicationUserService applicationUserService) {
+    private final ApplicationUserService applicationUserService;
+
+    public RegisterController(ApplicationUserService applicationUserService) {
         this.applicationUserService = applicationUserService;
     }
 

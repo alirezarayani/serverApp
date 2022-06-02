@@ -25,7 +25,4 @@ public class ProgrammingLanguage {
 
     @Column(unique = true, nullable = false)
     private String language;
-    @JsonManagedReference
-    @OneToMany(mappedBy = "language")
-    private List<Question> questions = new ArrayList<>();
 }
